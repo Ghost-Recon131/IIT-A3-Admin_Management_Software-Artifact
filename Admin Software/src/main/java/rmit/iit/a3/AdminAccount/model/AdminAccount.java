@@ -16,7 +16,7 @@ import java.util.Collections;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "CourseInfo")
+@Table(name = "admin_accounts")
 public class AdminAccount implements UserDetails {
 
     // Unique ID for account
