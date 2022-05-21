@@ -42,6 +42,24 @@ public class AdminAccountService implements UserDetailsService {
         }
     }
 
+    // Updates account password if entered details are correct
+    public void resetAccountPassword(String email, String password, String secretQuestion, String sqAnswer, Label errorLabel){
+        try{
+            AdminAccount account = adminAccountRepository.getByUsername(email);
+            String hashedPassword = hashUtil.getHash(password);
+            String hashedSQAnswer = hashUtil.getHash(sqAnswer);
+
+            if(account.getSecretQuestion().equals(secretQuestion) && account.getSqAnswer().equals(hashedSQAnswer)){
+                account.setPassword(hashedPassword);
+            }
+            adminAccountRepository.save(account);
+            errorLabel.setText("Password reset successfully!");
+        }catch (Exception e){
+            logger.error(e.getMessage());
+            errorLabel.setText("One or more incorrect fields!");
+        }
+    }
+
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
