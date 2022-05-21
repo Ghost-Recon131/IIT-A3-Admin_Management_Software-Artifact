@@ -14,12 +14,12 @@
          <Font name="System Bold" size="46.0" />
       </font>
    </Text>
-   <TextField layoutX="237.0" layoutY="210.0" prefHeight="92.0" prefWidth="1023.0" promptText="Email" AnchorPane.leftAnchor="237.0" AnchorPane.rightAnchor="236.0">
+   <TextField fx:id="email" layoutX="237.0" layoutY="210.0" prefHeight="92.0" prefWidth="1023.0" promptText="Email" AnchorPane.leftAnchor="237.0" AnchorPane.rightAnchor="236.0">
       <font>
          <Font size="22.0" />
       </font>
    </TextField>
-   <PasswordField layoutX="237.0" layoutY="336.0" prefHeight="92.0" prefWidth="1023.0" promptText="Password" AnchorPane.leftAnchor="237.0" AnchorPane.rightAnchor="236.0">
+   <PasswordField fx:id="password" layoutX="237.0" layoutY="336.0" prefHeight="92.0" prefWidth="1023.0" promptText="Password" AnchorPane.leftAnchor="237.0" AnchorPane.rightAnchor="236.0">
       <font>
          <Font size="22.0" />
       </font>
