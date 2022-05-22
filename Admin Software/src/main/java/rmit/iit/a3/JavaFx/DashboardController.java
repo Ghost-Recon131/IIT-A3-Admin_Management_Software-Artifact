@@ -24,10 +24,10 @@ public class DashboardController {
     @FXML
     private ImageView notificationIcon;
 
-    //TODO: Go to Bulk management page
+    // Go to Bulk management page
     public void viewBulkManagement(ActionEvent event){
         try{
-//            SwitchSceneUtil.switchFXML(event, fxWeaver.loadView(BulkManagementController.class));
+            SwitchSceneUtil.switchFXML(event, fxWeaver.loadView(BulkManagementController.class));
         }catch (Exception e){
             logger.error(e.getMessage());
         }
@@ -60,7 +60,7 @@ public class DashboardController {
         }
     }
 
-    //TODO: Logout
+    // Logout
     public void logout(ActionEvent event){
         try{
             SwitchSceneUtil.switchFXML(event, fxWeaver.loadView(LoginController.class));

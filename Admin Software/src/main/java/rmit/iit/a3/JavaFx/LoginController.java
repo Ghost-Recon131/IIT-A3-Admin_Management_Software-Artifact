@@ -36,10 +36,13 @@ public class LoginController {
         this.fxWeaver = fxWeaver;
     }
 
-    public void signIn(){
+    public void signIn(ActionEvent event){
         if(adminLoginService.login(email.getText(), password.getText(), errorLabel)){
-            System.err.println("Successful login!");
-            //TODO: Take user to main page
+            try{
+                SwitchSceneUtil.switchFXML(event, fxWeaver.loadView(DashboardController.class));
+            }catch (Exception e){
+                logger.error(e.getMessage());
+            }
         }
     }
 
