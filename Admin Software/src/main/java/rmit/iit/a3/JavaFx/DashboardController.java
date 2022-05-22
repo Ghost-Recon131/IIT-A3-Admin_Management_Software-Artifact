@@ -43,19 +43,19 @@ public class DashboardController {
         }
     }
 
-    //TODO: Go to logs page
+    //Go to logs page
     public void viewLogs(ActionEvent event){
         try{
-//            SwitchSceneUtil.switchFXML(event, fxWeaver.loadView(LogsController.class));
+            SwitchSceneUtil.switchFXML(event, fxWeaver.loadView(LogsController.class));
         }catch (Exception e){
             logger.error(e.getMessage());
         }
     }
 
-    //TODO: Go to mange ML Model page
+    //Go to manage ML Model page
     public void mangeMLModel(ActionEvent event){
         try{
-//            SwitchSceneUtil.switchFXML(event, fxWeaver.loadView(MLModelController.class));
+            SwitchSceneUtil.switchFXML(event, fxWeaver.loadView(MLModelController.class));
         }catch (Exception e){
             logger.error(e.getMessage());
         }
