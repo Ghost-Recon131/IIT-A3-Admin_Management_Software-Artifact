@@ -5,6 +5,7 @@ __pycache__/
 
 # C extensions
 *.so
+application-production.properties
 
 # Distribution / packaging
 .Python
