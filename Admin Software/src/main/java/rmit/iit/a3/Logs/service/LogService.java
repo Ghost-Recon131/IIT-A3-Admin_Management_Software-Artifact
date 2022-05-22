@@ -2,7 +2,6 @@ package rmit.iit.a3.Logs.service;
 
 import com.thedeanda.lorem.Lorem;
 import com.thedeanda.lorem.LoremIpsum;
-import lombok.AllArgsConstructor;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 import org.apache.logging.log4j.LogManager;
