@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="998.0" prefWidth="1496.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rmit.iit.a3.JavaFx.MLModelController">
+   <children>
+      <Text layoutX="367.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manually defined specifications" textAlignment="CENTER" wrappingWidth="762.39453125" AnchorPane.bottomAnchor="876.81640625" AnchorPane.leftAnchor="367.0" AnchorPane.rightAnchor="366.60546875" AnchorPane.topAnchor="60.0">
+         <font>
+            <Font name="System Bold" size="46.0" />
+         </font>
+      </Text>
+      <Button layoutX="100.0" layoutY="363.0" mnemonicParsing="false" onAction="#addSpecification" prefHeight="61.0" prefWidth="492.0" text="Add Specification" textAlignment="CENTER" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="904.0">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Button>
+      <Button layoutX="100.0" layoutY="452.0" mnemonicParsing="false" onAction="#editSpecification" prefHeight="61.0" prefWidth="492.0" text="Edit Specification" textAlignment="CENTER" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="904.0">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="homeIcon" fitHeight="68.0" fitWidth="77.0" layoutX="55.0" layoutY="85.0" onMouseClicked="#backToDashboard" AnchorPane.leftAnchor="55.0">
+         <image>
+            <Image url="@../CustomGraphics/Home-Icon.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="100.0" layoutY="543.0" mnemonicParsing="false" onAction="#removeSpecification" prefHeight="61.0" prefWidth="492.0" text="Remove Specification" textAlignment="CENTER" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="904.0">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="notificationIcon" fitHeight="77.0" fitWidth="82.0" layoutX="125.0" layoutY="82.0" onMouseClicked="#viewNotification" AnchorPane.leftAnchor="125.0">
+         <image>
+            <Image url="@../CustomGraphics/Notification-Icon.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="actionLabel" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="100.0" layoutY="618.0" prefHeight="169.0" prefWidth="492.0" textAlignment="CENTER" textFill="#00ff26" wrapText="true">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="textArea" editable="false" layoutX="665.0" layoutY="218.0" prefHeight="649.0" prefWidth="753.0" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextArea>
+      <Text layoutX="867.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Specifications" textAlignment="CENTER" wrappingWidth="348.39453125">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
