@@ -25,7 +25,7 @@
             <Font name="System Bold" size="28.0" />
          </font>
       </Button>
-      <ImageView fx:id="homeIcon" fitHeight="68.0" fitWidth="77.0" layoutX="55.0" layoutY="85.0" onMouseClicked="#backToDashboard" AnchorPane.leftAnchor="55.0">
+      <ImageView fitHeight="68.0" fitWidth="77.0" layoutX="55.0" layoutY="85.0" onMouseClicked="#backToDashboard" AnchorPane.leftAnchor="55.0">
          <image>
             <Image url="@../CustomGraphics/Home-Icon.png" />
          </image>

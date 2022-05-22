@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="998.0" prefWidth="1496.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rmit.iit.a3.JavaFx.NotificationController">
+   <children>
+      <Text layoutX="367.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Notifications" textAlignment="CENTER" wrappingWidth="762.39453125" AnchorPane.bottomAnchor="871.455078125" AnchorPane.leftAnchor="367.0" AnchorPane.rightAnchor="366.60546875" AnchorPane.topAnchor="65.361328125">
+         <font>
+            <Font name="System Bold" size="46.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="homeIcon" fitHeight="68.0" fitWidth="77.0" layoutX="55.0" layoutY="85.0" onMouseClicked="#backToDashboard" AnchorPane.leftAnchor="55.0">
+         <image>
+            <Image url="@../CustomGraphics/Home-Icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="notificationIcon" fitHeight="77.0" fitWidth="82.0" layoutX="125.0" layoutY="82.0" AnchorPane.leftAnchor="125.0">
+         <image>
+            <Image url="@../CustomGraphics/Notification-Icon.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="actionLabel" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="443.0" layoutY="881.0" prefHeight="110.0" prefWidth="865.0" textAlignment="CENTER" textFill="#00ff26" wrapText="true">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="713.0" layoutX="297.0" layoutY="159.0" stroke="BLACK" strokeType="INSIDE" width="1158.0" AnchorPane.leftAnchor="297.0" AnchorPane.rightAnchor="41.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="713.0" layoutX="42.0" layoutY="159.0" stroke="BLACK" strokeType="INSIDE" width="236.0" AnchorPane.leftAnchor="42.0" />
+      <Text layoutX="56.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications" textAlignment="CENTER" wrappingWidth="207.39453125">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <ListView fx:id="listView" layoutX="49.0" layoutY="207.0" prefHeight="656.0" prefWidth="222.0" AnchorPane.leftAnchor="49.0" />
+      <Text layoutX="722.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Detailed View" textAlignment="CENTER" wrappingWidth="307.39453125" AnchorPane.leftAnchor="722.0" AnchorPane.rightAnchor="466.60546875">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Label fx:id="detail3" alignment="TOP_RIGHT" layoutX="304.0" layoutY="559.0" prefHeight="68.0" prefWidth="333.0" wrapText="true" AnchorPane.leftAnchor="304.0">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="detail2" alignment="TOP_RIGHT" layoutX="330.0" layoutY="421.0" prefHeight="68.0" prefWidth="307.0" wrapText="true" AnchorPane.leftAnchor="330.0">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="detail1" alignment="TOP_RIGHT" layoutX="304.0" layoutY="285.0" prefHeight="68.0" prefWidth="333.0" wrapText="true" AnchorPane.leftAnchor="304.0">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="fullInfo1" alignment="TOP_LEFT" layoutX="651.0" layoutY="285.0" prefHeight="99.0" prefWidth="623.0" wrapText="true" AnchorPane.leftAnchor="651.0" AnchorPane.rightAnchor="222.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="fullInfo2" alignment="TOP_LEFT" layoutX="651.0" layoutY="421.0" prefHeight="99.0" prefWidth="623.0" wrapText="true" AnchorPane.leftAnchor="651.0" AnchorPane.rightAnchor="222.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="fullInfo3" alignment="TOP_LEFT" layoutX="657.0" layoutY="559.0" prefHeight="99.0" prefWidth="623.0" wrapText="true" AnchorPane.leftAnchor="657.0" AnchorPane.rightAnchor="216.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Button layoutX="1188.0" layoutY="798.0" mnemonicParsing="false" onAction="#markAsFalsePositive" text="Mark as False Positive">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

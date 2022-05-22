@@ -3,6 +3,7 @@ package rmit.iit.a3.JavaFx;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import net.rgielen.fxweaver.core.FxWeaver;
 import net.rgielen.fxweaver.core.FxmlView;
 import org.apache.logging.log4j.LogManager;
@@ -33,10 +34,10 @@ public class DashboardController {
         }
     }
 
-    //TODO: Go to notification page
+    //Go to notification page
     public void viewNotification(ActionEvent event){
         try{
-//            SwitchSceneUtil.switchFXML(event, fxWeaver.loadView(NotificationController.class));
+            SwitchSceneUtil.switchFXML(event, fxWeaver.loadView(NotificationController.class));
         }catch (Exception e){
             logger.error(e.getMessage());
         }
@@ -64,6 +65,14 @@ public class DashboardController {
     public void logout(ActionEvent event){
         try{
             SwitchSceneUtil.switchFXML(event, fxWeaver.loadView(LoginController.class));
+        }catch (Exception e){
+            logger.error(e.getMessage());
+        }
+    }
+
+    public void viewNotificationPage(MouseEvent event){
+        try{
+            SwitchSceneUtil.switchFXMLMouseEvent(event, fxWeaver.loadView(NotificationController.class));
         }catch (Exception e){
             logger.error(e.getMessage());
         }

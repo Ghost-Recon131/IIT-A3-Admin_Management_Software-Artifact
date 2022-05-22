@@ -60,7 +60,7 @@ public class BulkManagementController {
 
     public void viewNotification(MouseEvent event){
         try{
-//            SwitchSceneUtil.switchFXMLMouseEvent(event, fxWeaver.loadView(NotificationController.class));
+            SwitchSceneUtil.switchFXMLMouseEvent(event, fxWeaver.loadView(NotificationController.class));
         }catch (Exception e){
             logger.error(e.getMessage());
         }
