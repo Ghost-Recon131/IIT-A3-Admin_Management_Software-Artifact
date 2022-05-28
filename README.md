@@ -1,7 +1,7 @@
-# IIT - Monday Group 3 (Project Artefacts)
+# IIT - Monday Group 3 (Admin Management Software Artifact)
 Main repository: https://github.com/Ghost-Recon131/IIT-A3
 
-# Admin Software
+# Admin Software (JavaFx + SpringBoot)
 ## Running the .jar executable
 - Likely requires Java JDK 1.8 from Oracle or any other JDK version that has JavaFx built in
 - May need to run via terminal if you have newer version of Java JDK as default or if double-clicking doesn't work
