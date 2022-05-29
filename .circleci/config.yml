@@ -9,7 +9,7 @@ jobs: # steps
   build-and-test-admin-software:
     working_directory: ~/repo/admin-software/
     docker:
-      - image: circleci/openjdk:8-jdk
+      - image: circleci/openjdk:11-jdk
     steps:
       - checkout:
           path: ~/repo
