@@ -1,0 +1,29 @@
+version: 2.1
+jobs: # steps
+  build-and-test-admin-software:
+    working_directory: ~/repo/admin-software/
+    docker:
+      - image: circleci/openjdk:8-jdk-stretch
+    steps:
+      - checkout:
+          path: ~/repo
+      - restore_cache:
+          key: circleci-admin-software-{{ checksum "pom.xml" }}
+      - run: mvn dependency:go-offline
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: circleci-admin-software-{{ checksum "pom.xml" }}
+      - run: mvn package
+      - store_test_results:
+          path: target/surefire-reports
+      - store_artifacts:
+          path: target/admin-software-0.0.1-SNAPSHOT.jar
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build-and-test-admin-software:
+          filters:
+            branches:
+              only: master
