@@ -32,6 +32,8 @@ public class LoginController {
     @FXML
     private PasswordField password;
 
+    public static String currentUser;
+
     public LoginController(FxWeaver fxWeaver) {
         this.fxWeaver = fxWeaver;
     }
@@ -39,6 +41,7 @@ public class LoginController {
     public void signIn(ActionEvent event){
         if(adminLoginService.login(email.getText(), password.getText(), errorLabel)){
             try{
+                currentUser = email.getText();
                 SwitchSceneUtil.switchFXML(event, fxWeaver.loadView(DashboardController.class));
             }catch (Exception e){
                 logger.error(e.getMessage());

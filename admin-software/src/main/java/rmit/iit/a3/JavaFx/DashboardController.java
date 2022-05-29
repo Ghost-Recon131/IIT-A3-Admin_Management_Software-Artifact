@@ -2,6 +2,8 @@ package rmit.iit.a3.JavaFx;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import net.rgielen.fxweaver.core.FxWeaver;
@@ -11,9 +13,12 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
 import rmit.iit.a3.util.SwitchSceneUtil;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 @Component
 @FxmlView("Dashboard.fxml")
-public class DashboardController {
+public class DashboardController implements Initializable {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     private final FxWeaver fxWeaver;
@@ -24,6 +29,13 @@ public class DashboardController {
 
     @FXML
     private ImageView notificationIcon;
+    @FXML
+    private Label currentUser;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        currentUser.setText(LoginController.currentUser);
+    }
 
     // Go to Bulk management page
     public void viewBulkManagement(ActionEvent event){
