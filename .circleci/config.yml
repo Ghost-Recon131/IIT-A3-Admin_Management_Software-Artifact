@@ -1,9 +1,15 @@
 version: 2.1
+
+machine:
+  java:
+    version: oraclejdk8
+
+
 jobs: # steps
   build-and-test-admin-software:
     working_directory: ~/repo/admin-software/
     docker:
-      - image: circleci/openjdk:8-jdk-stretch
+      - image: circleci/openjdk:8-jdk
     steps:
       - checkout:
           path: ~/repo
