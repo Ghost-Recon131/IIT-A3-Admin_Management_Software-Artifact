@@ -10,6 +10,7 @@ jobs: # steps
     working_directory: ~/repo/admin-software/
     docker:
       - image: circleci/openjdk:8-jdk-stretch
+      - image: docker pull platpus/javafx
     steps:
       - checkout:
           path: ~/repo
